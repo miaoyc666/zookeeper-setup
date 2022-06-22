@@ -1,5 +1,3 @@
-
-
 #### Download & Tar
 ```bash
 wget https://dlcdn.apache.org/zookeeper/zookeeper-3.8.0/apache-zookeeper-3.8.0-bin.tar.gz
@@ -10,3 +8,9 @@ mv apache-zookeeper-3.8.0-bin.tar.gz /home/s/apps/zookeeper
 #### 配置集群
 1. 配置zoo.cfg, 包括数据目录，快照目录，server地址
 2. 在数据目录下创建myid文件，内容为server id
+
+#### zoo.cfg关键配置说明
+- dataDir：数据目录
+- dataLogDir：快照目录
+- clientPort：client连接端口，the port at which the clients will connect
+- server.1：集群配置，.1表示节点id，192.168.88.10:2888:3888，2888表示集群内通讯接口，3888集群内选举使用接口
