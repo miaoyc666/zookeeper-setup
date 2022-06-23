@@ -1,0 +1,18 @@
+[Unit]
+Description=Zookeeper Server
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=forking
+User=root
+Group=root
+Restart=always
+RestartSec=30
+ExecStart=/home/s/apps/zookeeper/apache-zookeeper-3.8.0-bin/bin/zkServer.sh start
+ExecStop=/home/s/apps/zookeeper/apache-zookeeper-3.8.0-bin/bin/zkServer.sh stop
+ExecReload=/home/s/apps/zookeeper/apache-zookeeper-3.8.0-bin/bin/zkServer.sh restart
+PIDFile=/data/zookeeper/zookeeper_server.pid
+
+[Install]
+WantedBy=multi-user.target
