@@ -14,3 +14,7 @@ mv apache-zookeeper-3.8.0-bin.tar.gz /home/s/apps/zookeeper
 - dataLogDir：快照目录
 - clientPort：client连接端口，the port at which the clients will connect
 - server.1：集群配置，.1表示节点id，192.168.88.10:2888:3888，2888表示集群内通讯接口，3888集群内选举使用接口
+
+#### systemd config
+1. cp zookeeper.service /etc/systemd/system/
+2. systemctl enable zookeeper.service 
