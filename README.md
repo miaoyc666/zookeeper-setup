@@ -20,4 +20,5 @@ mv apache-zookeeper-3.8.0-bin.tar.gz /home/s/apps/zookeeper
 2. systemctl enable zookeeper.service 
 
 #### 技巧
-1../zkCli.sh -server localhost:2181   # 客户端指定端口
+1.指定客户端端口
+`./zkCli.sh -server localhost:2181`
