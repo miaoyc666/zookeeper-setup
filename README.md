@@ -20,5 +20,13 @@ mv apache-zookeeper-3.8.0-bin.tar.gz /home/s/apps/zookeeper
 2. systemctl enable zookeeper.service 
 
 #### 技巧
-1.指定客户端端口
+1. 指定客户端端口
 `./zkCli.sh -server localhost:2181`
+
+#### 踩坑
+##### jute.maxbuffer
+调大jute.maxbuffer参数，调整写入数据包大小
+```bash
+# 调大jute.maxbuffer参数，调整写入数据包大小，在zk的部署机器上，进入zk的conf目录下，新建一个java.env文件，然后写入如下内容，示例为调整到10M
+export JVMFLAGS="-Xms512m -Xmx2048m -Djute.maxbuffer=10485760 " 
+```
