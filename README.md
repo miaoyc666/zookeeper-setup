@@ -22,6 +22,8 @@ mv apache-zookeeper-3.8.0-bin.tar.gz /home/s/apps/zookeeper
 #### 技巧
 1. 指定客户端端口
 `./zkCli.sh -server localhost:2181`
+2. 登录zookeeper
+`addauth digest $user:$pwd`
 
 #### 踩坑
 ##### jute.maxbuffer
