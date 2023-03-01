@@ -1,4 +1,4 @@
-#### Download & Tar
+#### Download & Install
 ```bash
 wget https://dlcdn.apache.org/zookeeper/zookeeper-3.8.0/apache-zookeeper-3.8.0-bin.tar.gz
 mkdir -p /home/s/apps/zookeeper
