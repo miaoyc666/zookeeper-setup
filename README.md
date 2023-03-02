@@ -1,9 +1,15 @@
+Zookeeper-setup
+=
+
 #### Download & Install
 ```bash
 wget https://dlcdn.apache.org/zookeeper/zookeeper-3.8.0/apache-zookeeper-3.8.0-bin.tar.gz
 mkdir -p /home/s/apps/zookeeper
 mv apache-zookeeper-3.8.0-bin.tar.gz /home/s/apps/zookeeper
 ```
+
+#### 依赖
+- Java
 
 #### 配置集群
 1. 配置zoo.cfg, 包括数据目录，快照目录，server地址
