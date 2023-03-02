@@ -9,10 +9,10 @@ User=root
 Group=root
 Restart=always
 RestartSec=30
-ExecStart=/home/s/apps/zookeeper/apache-zookeeper-3.8.0-bin/bin/zkServer.sh start
-ExecStop=/home/s/apps/zookeeper/apache-zookeeper-3.8.0-bin/bin/zkServer.sh stop
-ExecReload=/home/s/apps/zookeeper/apache-zookeeper-3.8.0-bin/bin/zkServer.sh restart
-PIDFile=/data/zookeeper/zookeeper_server.pid
+ExecStart=/usr/local/zookeeper/bin/zkServer.sh start
+ExecStop=/usr/local/zookeeper/bin/zkServer.sh stop
+ExecReload=/usr/local/zookeeper/bin/zkServer.sh restart
+PIDFile=/data/zookeeper-new/zookeeper_server.pid
 
 [Install]
 WantedBy=multi-user.target
